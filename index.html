@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine Tours Skardu | Rent Prado, K2 & Deosai Tours, Skardu Tour Packages</title>
+    <meta name="description"
+        content="Alpine Tours Skardu offers premium car rentals (Prado, Corolla) and tour packages to K2, Deosai, Basho Valley, and Hunza. Book your Skardu tour guide today!">
+    <meta name="keywords"
+        content="Tours, Skardu, Rent, Prado, K2, Nangma, Nagma, Machulo La, Hushe, Basho Valley, Deosai, Manthoka Waterfall, Katpana, Sarfaranga, Kachura, Tour Guide, Packages, Hunza, Skardu Car Rental">
+    <meta name="author" content="Alpine Tours Skardu">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alpinetourskardu.com/">
+    <meta property="og:title" content="Alpine Tours Skardu | Rent Prado, K2 & Deosai Tours">
+    <meta property="og:description"
+        content="Premium car rentals and customized tour packages in Skardu. Explore Deosai, K2, and Basho Valley with our expert tour guides.">
+    <meta property="og:image" content="img/skardu.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://alpinetourskardu.com/">
+    <meta property="twitter:title" content="Alpine Tours Skardu | Rent Prado, K2 & Deosai Tours">
+    <meta property="twitter:description"
+        content="Premium car rentals and customized tour packages in Skardu. Explore Deosai, K2, and Basho Valley.">
+    <meta property="twitter:image" content="img/skardu.webp">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Alpine Tours Skardu",
+      "image": "img/skardu.webp",
+      "@id": "",
+      "url": "https://alpinetourskardu.com/",
+      "telephone": "+923182277086",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Bazaar",
+        "addressLocality": "Skardu",
+        "addressRegion": "Gilgit-Baltistan",
+        "postalCode": "16100",
+        "addressCountry": "PK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.2975,
+        "longitude": 75.6333
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="img/bag1.jpg">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#home">Alpine Tours <span>Skardu</span></a>
+            </div>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#fleet">Fleet</a>
+                <a href="#tours">Tours</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="tel:+923182277086" class="btn btn-outline hide-mobile">Call Now</a>
+                <a href="https://wa.me/923182277086" target="_blank" class="btn btn-primary">
+                    <i data-lucide="message-circle"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home">Home</a>
+            <a href="#fleet">Fleet</a>
+            <a href="#tours">Tours</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+            <a href="tel:+923182277086" class="mobile-cta">Call Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider" id="heroSlider">
+            <!-- Slides will be injected or hardcoded -->
+            <div class="slide active"
+                style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/bag1.jpg')">
+                <div class="container hero-content">
+                    <h1 class="fade-in">Rent Your Ride in Skardu</h1>
+                    <p class="fade-in-delay">Explore the breathtaking beauty of Skardu with our premium car rental services</p>
+                    <div class="hero-btns fade-in-delay-2">
+                        <a href="https://wa.me/923182277086" target="_blank" class="btn btn-primary btn-lg">Book via WhatsApp</a>
+                        <a href="#fleet" class="btn btn-outline btn-lg">View Our Fleet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <button id="prevSlide"><i data-lucide="chevron-left"></i></button>
+            <button id="nextSlide"><i data-lucide="chevron-right"></i></button>
+        </div>
+
+        <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    <!-- Pricing Calculator Section -->
+    <section id="pricing" class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Pricing Calculator</h2>
+                <p>Estimate your rental cost instantly</p>
+            </div>
+
+            <div class="calculator-card">
+                <div class="calc-header">
+                    <i data-lucide="calculator"></i>
+                    <h3>Calculate Your Rental Cost</h3>
+                </div>
+                <div class="calc-body">
+                    <div class="calc-grid">
+                        <div class="calc-form-side">
+                            <div class="form-group">
+                                <label for="carSelect">Select Car Model</label>
+                                <select id="carSelect">
+                                    <option value="" disabled selected>Choose a car...</option>
+                                    <option value="8000" data-name="Toyota Prado Tz/Tx (2003-2010)"
+                                        data-image="https://cdn.builder.io/api/v1/image/assets%2Ffdd56951636c4281af1ff3e14802ea36%2F48b029d29fe64defafe3b20cee55f166?format=webp&width=400"
+                                        data-fuel="10000">Toyota Prado (2003-2010) </option>
+                                    <option value="7000" data-name="Toyota Prado Tz/Tx (1998-2002)"
+                                        data-image="https://cdn.builder.io/api/v1/image/assets%2Ffdd56951636c4281af1ff3e14802ea36%2F7db49ef62cf04a0687fddeb3b77f5457?format=webp&width=400"
+                                        data-fuel="9000">Toyota Prado (1998-2002) </option>
+                                    <option value="18000" data-name="Toyota Prado Tz/Tx (2013-2020)"
+                                        data-image="https://cdn.builder.io/api/v1/image/assets%2Ffdd56951636c4281af1ff3e14802ea36%2F344e35fb4f974686bb15cae7d5325103?format=webp&width=400"
+                                        data-fuel="11000">Toyota Prado (2013-2020) </option>
+                                    <option value="5000" data-name="Toyota Corolla" data-image="img/Corolla .jpg"
+                                        data-fuel="6000">Toyota Corolla </option>
+                                    <option value="6000" data-name="Toyota Premio" data-image="img/Premio.jpg"
+                                        data-fuel="6000">Toyota Premio </option>
+                                    <option value="13000" data-name="Toyota Grand Cabin"
+                                        data-image="img/Grand Cabin.jpeg" data-fuel="8000">Toyota Grand Cabin </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="rentalDays">Rental Days</label>
+                                <input type="number" id="rentalDays" min="1" max="30" value="1">
+                            </div>
+
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="fuelOption">
+                                <label for="fuelOption">Fuel by customer (saves money)</label>
+                            </div>
+
+                            <div class="calc-inclusions">
+                                <div class="inclusion-item">
+                                    <span>Driver Service</span>
+                                    <span class="status-badge"><i data-lucide="check"></i> Always Included</span>
+                                </div>
+                                <div class="inclusion-item">
+                                    <span>Insurance Coverage</span>
+                                    <span class="status-badge"><i data-lucide="check"></i> Included</span>
+                                </div>
+                            </div>
+
+                            <div id="selectedVehicleCard" class="selected-vehicle-card" style="display: none;">
+                                <h4>Selected Vehicle</h4>
+                                <div class="selected-vehicle-box">
+                                    <img id="selectedVehicleImg" src="" alt="Selected Vehicle">
+                                    <div class="selected-vehicle-name" id="selectedVehicleName"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calc-summary-side">
+                            <div class="price-breakdown-card">
+                                <h3>Price Breakdown</h3>
+                                <div class="breakdown-list">
+                                    <div class="breakdown-item">
+                                        <span class="label">Base Rate (<span id="summaryDays">1</span> days)</span>
+                                        <span class="value" id="summaryBase">PKR 0</span>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <span class="label">Driver Service</span>
+                                        <span class="value text-success">Included</span>
+                                    </div>
+                                    <div class="breakdown-item" id="fuelBreakdown">
+                                        <span class="label">Fuel Cost</span>
+                                        <span class="value" id="summaryFuel">PKR 0</span>
+                                    </div>
+                                </div>
+                                <div class="total-estimate">
+                                    <span class="label">Total Estimate</span>
+                                    <span class="value" id="totalPrice">PKR 0</span>
+                                </div>
+                                <button class="btn btn-primary btn-block" id="bookBtn">
+                                    <i data-lucide="message-circle"></i>
+                                    Get Quote via WhatsApp
+                                </button>
+                            </div>
+
+                            <div class="pro-tips">
+                                <h4><i data-lucide="lightbulb"></i> Pro Tips</h4>
+                                <ul>
+                                    <li>Longer rentals may qualify for discounts</li>
+                                    <li>Fuel by customer option saves upto 50%</li>
+                                    <li>All vehicles include comprehensive insurance</li>
+                                    <li>Professional drivers know the best routes</li>
+                                </ul>
+                            </div>
+
+                            <div class="custom-quote-msg">
+                                For custom quotes or long-term rentals, contact us on WhatsApp
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Premium Fleet</h2>
+                <p>Choose from our well-maintained collection of vehicles</p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Vehicle Card 1 -->
+                <div class="card vehicle-card">
+                    <div class="card-img">
+                        <img src="https://cdn.builder.io/api/v1/image/assets%2Ffdd56951636c4281af1ff3e14802ea36%2F48b029d29fe64defafe3b20cee55f166?format=webp&width=400"
+                            alt="Toyota Prado Tz/Tx">
+                        <div class="card-overlay">
+                            <a href="https://wa.me/923182277086" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Toyota Prado </h3>
+                        <p class="subtitle">(2003-2010)</p>
+                        <div class="vehicle-info">
+                            <span><i data-lucide="users"></i> 6 Passengers</span>
+                            <span><i data-lucide="fuel"></i> Petrol</span>
+                        </div>
+                        <div class="price-tag">
+                            <span class="amount">PKR 18,000</span>
+                            <span class="unit">/day</span>
+                        </div>
+                        <a href="https://wa.me/923182277086" class="btn btn-primary btn-block">Book via WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 2 -->
+                <div class="card vehicle-card">
+                    <div class="card-img">
+                        <img src="https://cdn.builder.io/api/v1/image/assets%2Ffdd56951636c4281af1ff3e14802ea36%2F7db49ef62cf04a0687fddeb3b77f5457?format=webp&width=400"
+                            alt="Toyota Prado Tz/Tx">
+                        <div class="card-overlay">
+                            <a href="https://wa.me/923182277086" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Toyota Prado </h3>
+                        <p class="subtitle">(1998-2002)</p>
+                        <div class="vehicle-info">
+                            <span><i data-lucide="users"></i> 6 Passengers</span>
+                            <span><i data-lucide="fuel"></i> Petrol</span>
+                        </div>
+                        <div class="price-tag">
+                            <span class="amount">PKR 16,000</span>
+                            <span class="unit">/day</span>
+                        </div>
+                        <a href="https://wa.me/923182277086" class="btn btn-primary btn-block">Book via WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 3 -->
+                <div class="card vehicle-card">
+                    <div class="card-img">
+                        <img src="https://cdn.builder.io/api/v1/image/assets%2Ffdd56951636c4281af1ff3e14802ea36%2F344e35fb4f974686bb15cae7d5325103?format=webp&width=400"
+                            alt="Toyota Prado Tz/Tx">
+                        <div class="card-overlay">
+                            <a href="https://wa.me/923182277086" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Toyota Prado </h3>
+                        <p class="subtitle">(2013-2020)</p>
+                        <div class="vehicle-info">
+                            <span><i data-lucide="users"></i> 6 Passengers</span>
+                            <span><i data-lucide="fuel"></i> Petrol</span>
+                        </div>
+                        <div class="price-tag">
+                            <span class="amount">PKR 29,000</span>
+                            <span class="unit">/day</span>
+                        </div>
+                        <a href="https://wa.me/923182277086" class="btn btn-primary btn-block">Book via WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 4: Toyota Corolla -->
+                <div class="card vehicle-card">
+                    <div class="card-img">
+                        <img src="img/Corolla%20.jpg" alt="Toyota Corolla">
+                        <div class="card-overlay">
+                            <a href="https://wa.me/923182277086" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Toyota Corolla</h3>
+                        <p class="subtitle">Comfortable Sedan</p>
+                        <div class="vehicle-info">
+                            <span><i data-lucide="users"></i> 4 Passengers</span>
+                            <span><i data-lucide="fuel"></i> Petrol</span>
+                        </div>
+                        <div class="price-tag">
+                            <span class="amount">PKR 11,000</span>
+                            <span class="unit">/day</span>
+                        </div>
+                        <a href="https://wa.me/923182277086" class="btn btn-primary btn-block">Book via WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 5: Toyota Premio -->
+                <div class="card vehicle-card">
+                    <div class="card-img">
+                        <img src="img/Premio.jpg" alt="Toyota Premio">
+                        <div class="card-overlay">
+                            <a href="https://wa.me/923182277086" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Toyota Premio</h3>
+                        <p class="subtitle">Premium Sedan</p>
+                        <div class="vehicle-info">
+                            <span><i data-lucide="users"></i> 4 Passengers</span>
+                            <span><i data-lucide="fuel"></i> Petrol</span>
+                        </div>
+                        <div class="price-tag">
+                            <span class="amount">PKR 12,000</span>
+                            <span class="unit">/day</span>
+                        </div>
+                        <a href="https://wa.me/923182277086" class="btn btn-primary btn-block">Book via WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 6: Toyota Grand Cabin -->
+                <div class="card vehicle-card">
+                    <div class="card-img">
+                        <img src="img/Grand%20Cabin.jpeg" alt="Toyota Grand Cabin">
+                        <div class="card-overlay">
+                            <a href="https://wa.me/923182277086" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Toyota Grand Cabin</h3>
+                        <p class="subtitle">Large Group Van</p>
+                        <div class="vehicle-info">
+                            <span><i data-lucide="users"></i> 13 Passengers</span>
+                            <span><i data-lucide="fuel"></i> Petrol</span>
+                        </div>
+                        <div class="price-tag">
+                            <span class="amount">PKR 21,000</span>
+                            <span class="unit">/day</span>
+                        </div>
+                        <a href="https://wa.me/923182277086" class="btn btn-primary btn-block">Book via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fleet-features grid grid-3 mt-section">
+                <div class="feature-item">
+                    <div class="icon-circle"><i data-lucide="shield"></i></div>
+                    <h4>Well-Maintained</h4>
+                    <p>Regular servicing and quality checks</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon-circle"><i data-lucide="users"></i></div>
+                    <h4>Professional Drivers</h4>
+                    <p>Experienced local drivers included</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon-circle"><i data-lucide="shield-check"></i></div>
+                    <h4>Fully Insured</h4>
+                    <p>Complete insurance coverage included</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Services Section -->
+    <section id="tours" class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Tour & Travel Services in Skardu & Hunza</h2>
+                <p>Explore the best of Gilgit-Baltistan including K2 Base Camp, Deosai, Basho Valley, Nangma (Nagma)
+                    Valley, and Hushe with our expert tour guides and premium car rentals.</p>
+            </div>
+
+            <div class="grid grid-4 mb-section">
+                <div class="service-icon-box">
+                    <div class="icon-circle"><i data-lucide="map-pin"></i></div>
+                    <h4>Customized Itineraries</h4>
+                    <p>Plan your perfect trip</p>
+                </div>
+                <div class="service-icon-box">
+                    <div class="icon-circle"><i data-lucide="calendar"></i></div>
+                    <h4>Flexible Scheduling</h4>
+                    <p>Travel at your own pace</p>
+                </div>
+                <div class="service-icon-box">
+                    <div class="icon-circle"><i data-lucide="home"></i></div>
+                    <h4>Complete Packages</h4>
+                    <p>Accommodation and meals included</p>
+                </div>
+                <div class="service-icon-box">
+                    <div class="icon-circle"><i data-lucide="users-2"></i></div>
+                    <h4>Group & Solo Tours</h4>
+                    <p>Options for everyone</p>
+                </div>
+            </div>
+
+            <h3 class="text-center mb-md">Popular Tour Packages</h3>
+            <div class="grid grid-3">
+                <!-- Tour Package 1 -->
+                <div class="card tour-card" style="background-image: url('img/skardu.webp')">
+                    <div class="card-content">
+                        <div class="tour-icon"></div>
+                        <h3>Skardu, Shigar, Kharmang & Khaplu</h3>
+                        <p class="tour-days">5 Days / 4 Nights</p>
+                        <div class="tour-price">
+                            <span class="label">Starting from</span>
+                            <h4 class="amount">PKR 75,000</h4>
+                            <span class="pax">for 2 persons</span>
+                        </div>
+                        <ul class="tour-highlights">
+                            <li><i data-lucide="check-circle"></i> Shangrila Resort & Kachura Lakes</li>
+                            <li><i data-lucide="check-circle"></i> Sarfaranga Cold Desert & Katpana Dunes</li>
+                            <li><i data-lucide="check-circle"></i> Shigar Fort & Amburiq Mosque</li>
+                            <li><i data-lucide="check-circle"></i> Manthoka Waterfall & Hushe Valley</li>
+                            <li><i data-lucide="check-circle"></i> Khaplu Valley & Machulo La K2 View</li>
+                        </ul>
+                        <a href="https://wa.me/923182277086?text=Hi!%20I'm%20interested%20in%20booking%20the%20Skardu,%20Shigar,%20Kharmang%20&%20Khaplu%205-Day%20Package."
+                            target="_blank" class="btn btn-primary btn-block">Book This Package</a>
+                    </div>
+                </div>
+
+                <!-- Tour Package 2 -->
+                <div class="card tour-card" style="background-image: url('img/skardu1.png')">
+                    <div class="card-content">
+                        <div class="tour-icon"></div>
+                        <h3>Skardu, Shigar, Hunza & Deosai</h3>
+                        <p class="tour-days">8 Days / 7 Nights</p>
+                        <div class="tour-price">
+                            <span class="label">Starting from</span>
+                            <h4 class="amount">PKR 170,000</h4>
+                            <span class="pax">for 2 persons</span>
+                        </div>
+                        <ul class="tour-highlights">
+                            <li><i data-lucide="check-circle"></i> Kachura Lakes & Shangrila</li>
+                            <li><i data-lucide="check-circle"></i> Shigar Valley exploration</li>
+                            <li><i data-lucide="check-circle"></i> Deosai National Park</li>
+                        </ul>
+                        <a href="https://wa.me/923182277086?text=Hi!%20I'm%20interested%20in%20booking%20the%20Skardu,%20Shigar,%20Hunza%20&%20Deosai%208-Day%20Package."
+                            target="_blank" class="btn btn-primary btn-block">Book This Package</a>
+                    </div>
+                </div>
+
+                <!-- Tour Package 3 -->
+                <div class="card tour-card" style="background-image: url('img/skardu2.jpg')">
+                    <div class="card-content">
+                        <div class="tour-icon"></div>
+                        <h3>Skardu, Shigar, Kharmang & Khaplu</h3>
+                        <p class="tour-days">8 Days / 7 Nights</p>
+                        <div class="tour-price">
+                            <span class="label">Starting from</span>
+                            <h4 class="amount">PKR 165,000</h4>
+                            <span class="pax">for 2 persons</span>
+                        </div>
+                        <ul class="tour-highlights">
+                            <li><i data-lucide="check-circle"></i> Complete Skardu sightseeing</li>
+                            <li><i data-lucide="check-circle"></i> Manthoka Waterfall</li>
+                            <li><i data-lucide="check-circle"></i> Basho Valley & Deosai</li>
+                        </ul>
+                        <a href="https://wa.me/923182277086?text=Hi!%20I'm%20interested%20in%20booking%20the%20Skardu,%20Shigar,%20Kharmang%20&%20Khaplu%208-Day%20Package."
+                            target="_blank" class="btn btn-primary btn-block">Book This Package</a>
+                    </div>
+                </div>
+
+                <!-- Tour Package 4: Machulo La Trek -->
+                <div class="card tour-card" style="background-image: url('img/macholo.webp')">
+                    <div class="card-content">
+                        <div class="tour-icon"></div>
+                        <h3>Machulo La Trek (K2 Viewpoint)</h3>
+                        <p class="tour-days">3 Days / 3 Nights</p>
+                        <div class="tour-price">
+                            <span class="label">Starting from</span>
+                            <h4 class="amount">PKR 100,000</h4>
+                            <span class="pax">for 2 persons</span>
+                        </div>
+                        <ul class="tour-highlights">
+                            <li><i data-lucide="check-circle"></i> K2 Viewpoint at 5,200m</li>
+                            <li><i data-lucide="check-circle"></i> Khady Broq alpine meadow</li>
+                            <li><i data-lucide="check-circle"></i> Machulo La camping</li>
+                        </ul>
+                        <a href="https://wa.me/923182277086?text=Hi!%20I'm%20interested%20in%20booking%20the%20Machulo%20La%20Trek."
+                            target="_blank" class="btn btn-primary btn-block">Book This Package</a>
+                    </div>
+                </div>
+
+                <!-- Tour Package 5: Nangma Valley Trek -->
+                <div class="card tour-card" style="background-image: url('img/nangma%20vally.jpg')">
+                    <div class="card-content">
+                        <div class="tour-icon"></div>
+                        <h3>Nangma Valley Trek</h3>
+                        <p class="tour-days">2 Days / 2 Nights</p>
+                        <div class="tour-price">
+                            <span class="label">Starting from</span>
+                            <h4 class="amount">PKR 90,000</h4>
+                            <span class="pax">for 2 persons</span>
+                        </div>
+                        <ul class="tour-highlights">
+                            <li><i data-lucide="check-circle"></i> Pristine Nangma Valley</li>
+                            <li><i data-lucide="check-circle"></i> Mingulo Broq camping</li>
+                            <li><i data-lucide="check-circle"></i> Mountain meadows & glaciers</li>
+                        </ul>
+                        <a href="https://wa.me/923182277086?text=Hi!%20I'm%20interested%20in%20booking%20the%20Nangma%20Valley%20Trek."
+                            target="_blank" class="btn btn-primary btn-block">Book This Package</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-banner mt-section">
+                <h3>Need a Custom Tour Plan?</h3>
+                <p>We specialize in creating personalized itineraries tailored to your preferences and schedule</p>
+                <div class="cta-features">
+                    <span>Corporate Groups</span>
+                    <span>Family Holidays</span>
+                    <span>Adventure Seekers</span>
+                </div>
+                <button class="btn btn-white">Plan My Custom Tour</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Popular Destinations</h2>
+            </div>
+            <div class="grid grid-4">
+                <div class="dest-card">
+                    <img src="img/deosai-national-park.webp" alt="Deosai National Park Skardu Tours">
+                    <div class="dest-overlay">
+                        <h4>Deosai National Park</h4>
+                        <p>Land of Giants</p>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <img src="img/katpana-cold-desert.webp" alt="Katpana Cold Desert Skardu Rent Prado">
+                    <div class="dest-overlay">
+                        <h4>Katpana Cold Desert</h4>
+                        <p>Unique sand dunes</p>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <img src="img/manthkha.jpg" alt="Manthoka Waterfall Kharmang Skardu Packages">
+                    <div class="dest-overlay">
+                        <h4>Manthoka Waterfall</h4>
+                        <p>Natural beauty</p>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <img src="img/shangrila-resort-lake.webp" alt="Shangrila Resort Kachura Lake Skardu Tour Guide">
+                    <div class="dest-overlay">
+                        <h4>Shangrila Resort</h4>
+                        <p>Lower Kachura Lake</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-dark text-white">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Get in Touch With Us</h2>
+                <p>Ready to book your Skardu adventure?</p>
+            </div>
+
+            <div class="grid grid-3 contact-cards">
+                <div class="contact-card">
+                    <div class="icon-circle bg-whatsapp"><i data-lucide="message-circle"></i></div>
+                    <h3>WhatsApp</h3>
+                    <p>Chat with us instantly</p>
+                    <a href="https://wa.me/923182277086" class="btn btn-whatsapp btn-block">Chat Now</a>
+                </div>
+                <div class="contact-card">
+                    <div class="icon-circle bg-phone"><i data-lucide="phone"></i></div>
+                    <h3>Phone Call</h3>
+                    <p>Speak with our team</p>
+                    <a href="tel:+923182277086" class="btn btn-phone btn-block" id="phoneCallBtn">Call Now</a>
+                </div>
+                <div class="contact-card">
+                    <div class="icon-circle" style="background: none; overflow: hidden;"><img src="img/fb_icon.jpg"
+                            alt="Facebook" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <h3>Messenger</h3>
+                    <p>Facebook Messenger</p>
+                    <a href="https://www.facebook.com/people/Alpine-Tours-Skardu/100077133245114/" target="_blank"
+                        class="btn btn-facebook btn-block">Visit Page</a>
+                </div>
+            </div>
+
+            <div class="grid grid-2 mt-section">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i data-lucide="phone"></i>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+92 318 227 7086</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p>alpineresort92@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="map-pin"></i>
+                        <div>
+                            <strong>Address</strong>
+                            <p>Main Bazaar, Skardu, Gilgit-Baltistan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-us">
+                    <h3>Why Choose Us?</h3>
+                    <ul class="check-list">
+                        <li><span>✓</span> Professional drivers with local knowledge</li>
+                        <li><span>✓</span> Well-maintained and insured vehicles</li>
+                        <li><span>✓</span> Customized tour plans</li>
+                        <li><span>✓</span> 24/7 customer support</li>
+                        <li><span>✓</span> Easy booking via WhatsApp</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="final-cta">
+                <h3>Start Your Skardu Adventure</h3>
+                <p>Book your car rental or tour package today</p>
+                <a href="https://wa.me/923182277086" class="btn btn-white btn-lg">Start Booking Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="footer-col">
+                    <h3>Alpine Tours Skardu</h3>
+                    <p>Your trusted partner for car rentals and tour packages in Skardu.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#fleet">Fleet</a></li>
+                        <li><a href="#tours">Tours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#pricing">Car Rental</a></li>
+                        <li><a href="#tours">Tour Packages</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100077133245114" target="_blank"
+                            class="facebook-link" aria-label="Facebook">
+                            <img src="img/fb_icon.jpg" alt="Facebook"
+                                style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+                        </a>
+                        <a href="https://www.instagram.com/incredibleskardu?igsh=cXI4b3U4dmhjMXF0" target="_blank"
+                            class="instagram-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-instagram">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alpine Tours Skardu. All rights reserved.Made by haideri</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
