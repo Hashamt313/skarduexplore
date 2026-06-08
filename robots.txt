@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alpinetourskardu.com/sitemap.xml
+Sitemap: https://skarduexplore.com/sitemap.xml

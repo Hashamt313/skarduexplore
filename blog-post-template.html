@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Replace TITLE below with your blog post title -->
+    <title>Blog Post Title - Skardu Explore</title>
+    <!-- Replace CONTENT below with a short 1-2 sentence description of the post -->
+    <meta name="description" content="A brief description of this blog post for search engines.">
+    <!-- Replace CONTENT below with keywords separated by commas -->
+    <meta name="keywords" content="Keyword1, Keyword2, Skardu, Gilgit Baltistan">
+    <meta name="author" content="Skardu Explore">
+    
+    <!-- Replace HREF below with the URL of this specific blog post -->
+    <link rel="canonical" href="https://alpinetourskardu.com/blog/your-post-url.html">
+
+    <!-- Open Graph / Facebook (Replace content attributes appropriately) -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://alpinetourskardu.com/blog/your-post-url.html">
+    <meta property="og:title" content="Blog Post Title">
+    <meta property="og:description" content="A brief description of this blog post.">
+    <!-- Replace content with the main image of the post -->
+    <meta property="og:image" content="https://alpinetourskardu.com/img/skardu.webp">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .blog-post-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .blog-post-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .blog-post-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        .blog-post-meta {
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .blog-post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .blog-post-featured-img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+        .blog-post-content {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
+        .blog-post-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 40px 0 20px;
+        }
+        .blog-post-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 30px 0 15px;
+        }
+        .blog-post-content p {
+            margin-bottom: 25px;
+        }
+        .blog-post-content img {
+            border-radius: 10px;
+            margin: 30px 0;
+            width: 100%;
+        }
+        .blog-post-content ul, .blog-post-content ol {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        .blog-post-content li {
+            margin-bottom: 10px;
+        }
+        .blog-post-content blockquote {
+            border-left: 5px solid var(--primary);
+            padding: 20px;
+            margin: 30px 0;
+            background-color: var(--bg-light);
+            font-style: italic;
+            border-radius: 0 10px 10px 0;
+        }
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: var(--bg-light);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 60px;
+            border: 1px solid var(--border);
+        }
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="scrolled">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../index.html">Skardu <span>Explore</span></a>
+            </div>
+
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#fleet">Fleet</a>
+                <a href="../index.html#tours">Tours</a>
+                <a href="../index.html#pricing">Pricing</a>
+                <a href="../index.html#contact">Contact</a>
+                <a href="../blog.html" class="active">Blog</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="tel:+923182277086" class="btn btn-outline hide-mobile" style="color: var(--secondary); border-color: var(--secondary);">Call Now</a>
+                <a href="https://wa.me/923182277086" target="_blank" class="btn btn-primary">
+                    <i data-lucide="message-circle"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" style="color: var(--secondary);">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#fleet">Fleet</a>
+            <a href="../index.html#tours">Tours</a>
+            <a href="../index.html#pricing">Pricing</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="../blog.html">Blog</a>
+            <a href="tel:+923182277086" class="mobile-cta">Call Now</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="margin-top: 100px;">
+        <div class="blog-post-container">
+            
+            <header class="blog-post-header">
+                <!-- Blog Title -->
+                <h1 class="blog-post-title">Your Blog Post Title Goes Here</h1>
+                
+                <!-- Blog Meta Info -->
+                <div class="blog-post-meta">
+                    <span><i data-lucide="calendar"></i> Date Published</span>
+                    <span><i data-lucide="user"></i> Author Name</span>
+                    <span><i data-lucide="clock"></i> X min read</span>
+                </div>
+            </header>
+
+            <!-- Featured Image -->
+            <img src="../img/skardu.webp" alt="Featured Image Description" class="blog-post-featured-img">
+
+            <!-- Blog Content -->
+            <article class="blog-post-content">
+                <p>Start writing your introductory paragraph here. This is where you grab the reader's attention and explain what the blog post is about. Make it engaging and informative.</p>
+                
+                <h2>Heading 2 Example</h2>
+                <p>Use H2 tags for main sections of your blog post. This helps with readability and SEO. Paragraphs should be concise and easy to read on mobile devices.</p>
+                
+                <ul>
+                    <li>First important point</li>
+                    <li>Second important point</li>
+                    <li>Third important point</li>
+                </ul>
+
+                <h3>Heading 3 Example</h3>
+                <p>If you need sub-sections, use H3 tags. Here is a blockquote example for emphasizing quotes or important text:</p>
+                
+                <blockquote>
+                    "The journey of a thousand miles begins with a single step. Make sure you book your Prado with Skardu Explore first!"
+                </blockquote>
+
+                <p>Conclude your blog post with a summary and a call to action. Encourage readers to book a tour or share the post.</p>
+            </article>
+
+            <!-- Author Box -->
+            <div class="author-box">
+                <div class="author-avatar">S</div>
+                <div>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 5px;">Skardu Explore Team</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Local experts dedicated to providing the best travel experiences, car rentals, and tour packages in Gilgit-Baltistan.</p>
+                </div>
+            </div>
+
+            <!-- Back to Blog Button -->
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="../blog.html" class="btn btn-primary"><i data-lucide="arrow-left"></i> Back to All Posts</a>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="margin-top: 80px;">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="footer-col">
+                    <h3>Skardu Explore</h3>
+                    <p>Your trusted partner for car rentals and tour packages in Skardu.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#fleet">Fleet</a></li>
+                        <li><a href="../index.html#tours">Tours</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../index.html#pricing">Car Rental</a></li>
+                        <li><a href="../index.html#tours">Tour Packages</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100077133245114" target="_blank" class="facebook-link" aria-label="Facebook">
+                            <img src="../img/fb_icon.jpg" alt="Facebook" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+                        </a>
+                        <a href="https://www.instagram.com/incredibleskardu?igsh=cXI4b3U4dmhjMXF0" target="_blank" class="instagram-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Skardu Explore. All rights reserved. Made by haideri</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        document.getElementById('navbar').classList.add('scrolled');
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
