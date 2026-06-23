@@ -39,159 +39,163 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Hero Slider ---
-    const slides = [
-        {
-            image: "img/bag1.jpg",
-            title: "Rent Your Ride in Skardu",
-            description: "Explore the breathtaking beauty of Skardu with our premium car rental services"
-        },
-        {
-            image: "img/bagimg.png",
-            title: "Professional Drivers",
-            description: "Experienced local drivers who know the best routes through the mountains"
-        },
-        {
-            image: "img/bag3.jpg",
-            title: "Modern Fleet",
-            description: "Well-maintained vehicles equipped for mountain terrain and comfort"
-        }
-    ];
-
     const sliderContainer = document.getElementById('heroSlider');
-    const dotsContainer = document.getElementById('sliderDots');
-    let currentSlide = 0;
+    if (sliderContainer) {
+        const slides = [
+            {
+                image: "img/bag1.jpg",
+                title: "Rent Your Ride in Skardu",
+                description: "Explore the breathtaking beauty of Skardu with our premium car rental services"
+            },
+            {
+                image: "img/bagimg.png",
+                title: "Professional Drivers",
+                description: "Experienced local drivers who know the best routes through the mountains"
+            },
+            {
+                image: "img/bag3.jpg",
+                title: "Modern Fleet",
+                description: "Well-maintained vehicles equipped for mountain terrain and comfort"
+            }
+        ];
 
-    // Initialize slider DOM
-    sliderContainer.innerHTML = slides.map((slide, index) => `
-        <div class="slide ${index === 0 ? 'active' : ''}" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${slide.image}')">
-            <div class="container hero-content">
-                <h1 class="fade-in">${slide.title}</h1>
-                <p class="fade-in-delay">${slide.description}</p>
-                <div class="hero-btns fade-in-delay-2">
-                    <a href="https://wa.me/923182277086" target="_blank" class="btn btn-primary btn-lg">Book via WhatsApp</a>
-                    <a href="#fleet" class="btn btn-outline btn-lg">View Our Fleet</a>
+        const dotsContainer = document.getElementById('sliderDots');
+        let currentSlide = 0;
+
+        // Initialize slider DOM
+        sliderContainer.innerHTML = slides.map((slide, index) => `
+            <div class="slide ${index === 0 ? 'active' : ''}" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${slide.image}')">
+                <div class="container hero-content">
+                    <h1 class="fade-in">${slide.title}</h1>
+                    <p class="fade-in-delay">${slide.description}</p>
+                    <div class="hero-btns fade-in-delay-2">
+                        <a href="https://wa.me/923182277086" target="_blank" class="btn btn-primary btn-lg">Book via WhatsApp</a>
+                        <a href="#fleet" class="btn btn-outline btn-lg">View Our Fleet</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    `).join('');
+        `).join('');
 
-    // Create dots
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
-
-    function updateSlider() {
-        // Update Slides
-        const slideElements = sliderContainer.querySelectorAll('.slide');
-        slideElements.forEach((slide, index) => {
-            slide.classList.toggle('active', index === currentSlide);
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
         });
 
-        // Update Dots
-        const dots = document.querySelectorAll('.dot');
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
-        });
+        function updateSlider() {
+            // Update Slides
+            const slideElements = sliderContainer.querySelectorAll('.slide');
+            slideElements.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+
+            // Update Dots
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        document.getElementById('nextSlide').addEventListener('click', nextSlide);
+        document.getElementById('prevSlide').addEventListener('click', prevSlide);
+
+        // Auto Slide
+        setInterval(nextSlide, 5000);
     }
-
-    function goToSlide(index) {
-        currentSlide = index;
-        updateSlider();
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateSlider();
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateSlider();
-    }
-
-    document.getElementById('nextSlide').addEventListener('click', nextSlide);
-    document.getElementById('prevSlide').addEventListener('click', prevSlide);
-
-    // Auto Slide
-    setInterval(nextSlide, 5000);
 
     // --- Price Calculator ---
     const carSelect = document.getElementById('carSelect');
-    const rentalDays = document.getElementById('rentalDays');
-    const fuelOption = document.getElementById('fuelOption');
-    const totalPrice = document.getElementById('totalPrice');
-    const bookBtn = document.getElementById('bookBtn');
+    if (carSelect) {
+        const rentalDays = document.getElementById('rentalDays');
+        const fuelOption = document.getElementById('fuelOption');
+        const totalPrice = document.getElementById('totalPrice');
+        const bookBtn = document.getElementById('bookBtn');
 
-    // New elements
-    const selectedVehicleCard = document.getElementById('selectedVehicleCard');
-    const selectedVehicleImg = document.getElementById('selectedVehicleImg');
-    const selectedVehicleName = document.getElementById('selectedVehicleName');
-    const summaryDays = document.getElementById('summaryDays');
-    const summaryBase = document.getElementById('summaryBase');
-    const summaryFuel = document.getElementById('summaryFuel');
-    const fuelBreakdown = document.getElementById('fuelBreakdown');
+        // New elements
+        const selectedVehicleCard = document.getElementById('selectedVehicleCard');
+        const selectedVehicleImg = document.getElementById('selectedVehicleImg');
+        const selectedVehicleName = document.getElementById('selectedVehicleName');
+        const summaryDays = document.getElementById('summaryDays');
+        const summaryBase = document.getElementById('summaryBase');
+        const summaryFuel = document.getElementById('summaryFuel');
+        const fuelBreakdown = document.getElementById('fuelBreakdown');
 
-    function calculateTotal() {
-        const selectedOption = carSelect.options[carSelect.selectedIndex];
-        const basePrice = parseInt(carSelect.value);
-        const days = parseInt(rentalDays.value) || 1;
-        const fuelCostPerDay = parseInt(selectedOption.getAttribute('data-fuel')) || 0;
-        const carImage = selectedOption.getAttribute('data-image');
-        const carName = selectedOption.getAttribute('data-name');
+        function calculateTotal() {
+            const selectedOption = carSelect.options[carSelect.selectedIndex];
+            const basePrice = parseInt(carSelect.value);
+            const days = parseInt(rentalDays.value) || 1;
+            const fuelCostPerDay = parseInt(selectedOption.getAttribute('data-fuel')) || 0;
+            const carImage = selectedOption.getAttribute('data-image');
+            const carName = selectedOption.getAttribute('data-name');
 
-        if (!isNaN(basePrice)) {
-            // Update Selected Vehicle Card
-            selectedVehicleCard.style.display = 'block';
-            selectedVehicleImg.src = carImage;
-            selectedVehicleName.textContent = carName;
+            if (!isNaN(basePrice)) {
+                // Update Selected Vehicle Card
+                selectedVehicleCard.style.display = 'block';
+                selectedVehicleImg.src = carImage;
+                selectedVehicleName.textContent = carName;
 
-            // Calculate Costs
-            let baseTotal = basePrice * days;
-            let fuelTotal = fuelCostPerDay * days;
-            
-            summaryDays.textContent = days;
-            summaryBase.textContent = `PKR ${baseTotal.toLocaleString()}`;
-            
-            let finalTotal = baseTotal;
+                // Calculate Costs
+                let baseTotal = basePrice * days;
+                let fuelTotal = fuelCostPerDay * days;
+                
+                summaryDays.textContent = days;
+                summaryBase.textContent = `PKR ${baseTotal.toLocaleString()}`;
+                
+                let finalTotal = baseTotal;
 
-            if (fuelOption.checked) {
-                fuelBreakdown.style.display = 'none';
-                // If fuel by customer, total is just base total
-                finalTotal = baseTotal;
+                if (fuelOption.checked) {
+                    fuelBreakdown.style.display = 'none';
+                    // If fuel by customer, total is just base total
+                    finalTotal = baseTotal;
+                } else {
+                    fuelBreakdown.style.display = 'flex';
+                    summaryFuel.textContent = `PKR ${fuelTotal.toLocaleString()}`;
+                    finalTotal = baseTotal + fuelTotal;
+                }
+
+                totalPrice.textContent = `PKR ${finalTotal.toLocaleString()}`;
             } else {
-                fuelBreakdown.style.display = 'flex';
-                summaryFuel.textContent = `PKR ${fuelTotal.toLocaleString()}`;
-                finalTotal = baseTotal + fuelTotal;
+                selectedVehicleCard.style.display = 'none';
+                totalPrice.textContent = `PKR 0`;
             }
-
-            totalPrice.textContent = `PKR ${finalTotal.toLocaleString()}`;
-        } else {
-            selectedVehicleCard.style.display = 'none';
-            totalPrice.textContent = `PKR 0`;
         }
+
+        carSelect.addEventListener('change', calculateTotal);
+        rentalDays.addEventListener('input', calculateTotal);
+        fuelOption.addEventListener('change', calculateTotal);
+
+        bookBtn.addEventListener('click', () => {
+            if (!carSelect.value) {
+                alert('Please select a car model first');
+                return;
+            }
+            const carName = carSelect.options[carSelect.selectedIndex].getAttribute('data-name');
+            const days = rentalDays.value;
+            const total = totalPrice.textContent;
+            const fuel = fuelOption.checked ? "Fuel by Customer" : "Fuel Included";
+
+            const message = `Hi! I want to book ${carName} for ${days} days. ${fuel}. Estimated Total: ${total}.`;
+            window.open(`https://wa.me/923182277086?text=${encodeURIComponent(message)}`, '_blank');
+        });
     }
-
-    carSelect.addEventListener('change', calculateTotal);
-    rentalDays.addEventListener('input', calculateTotal);
-    fuelOption.addEventListener('change', calculateTotal);
-
-    bookBtn.addEventListener('click', () => {
-        if (!carSelect.value) {
-            alert('Please select a car model first');
-            return;
-        }
-        const carName = carSelect.options[carSelect.selectedIndex].getAttribute('data-name');
-        const days = rentalDays.value;
-        const total = totalPrice.textContent;
-        const fuel = fuelOption.checked ? "Fuel by Customer" : "Fuel Included";
-
-        const message = `Hi! I want to book ${carName} for ${days} days. ${fuel}. Estimated Total: ${total}.`;
-        window.open(`https://wa.me/923182277086?text=${encodeURIComponent(message)}`, '_blank');
-    });
 
     // Smooth scroll for anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
