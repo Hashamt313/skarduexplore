@@ -41,43 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Hero Slider ---
     const sliderContainer = document.getElementById('heroSlider');
     if (sliderContainer) {
-        const slides = [
-            {
-                image: "img/bag1.jpg",
-                title: "Rent Your Ride in Skardu",
-                description: "Explore the breathtaking beauty of Skardu with our premium car rental services"
-            },
-            {
-                image: "img/bagimg.png",
-                title: "Professional Drivers",
-                description: "Experienced local drivers who know the best routes through the mountains"
-            },
-            {
-                image: "img/bag3.jpg",
-                title: "Modern Fleet",
-                description: "Well-maintained vehicles equipped for mountain terrain and comfort"
-            }
-        ];
-
         const dotsContainer = document.getElementById('sliderDots');
+        const slideElements = sliderContainer.querySelectorAll('.slide');
         let currentSlide = 0;
 
-        // Initialize slider DOM
-        sliderContainer.innerHTML = slides.map((slide, index) => `
-            <div class="slide ${index === 0 ? 'active' : ''}" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${slide.image}')">
-                <div class="container hero-content">
-                    <h1 class="fade-in">${slide.title}</h1>
-                    <p class="fade-in-delay">${slide.description}</p>
-                    <div class="hero-btns fade-in-delay-2">
-                        <a href="https://wa.me/923182277086" target="_blank" class="btn btn-primary btn-lg">Book via WhatsApp</a>
-                        <a href="#fleet" class="btn btn-outline btn-lg">View Our Fleet</a>
-                    </div>
-                </div>
-            </div>
-        `).join('');
-
         // Create dots
-        slides.forEach((_, index) => {
+        slideElements.forEach((_, index) => {
             const dot = document.createElement('div');
             dot.classList.add('dot');
             if (index === 0) dot.classList.add('active');
@@ -87,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function updateSlider() {
             // Update Slides
-            const slideElements = sliderContainer.querySelectorAll('.slide');
             slideElements.forEach((slide, index) => {
                 slide.classList.toggle('active', index === currentSlide);
             });
@@ -105,12 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
+            currentSlide = (currentSlide + 1) % slideElements.length;
             updateSlider();
         }
 
         function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            currentSlide = (currentSlide - 1 + slideElements.length) % slideElements.length;
             updateSlider();
         }
 
