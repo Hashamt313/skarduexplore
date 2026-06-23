@@ -264,6 +264,7 @@ img {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    background-color: var(--secondary);
 }
 
 .hero-slider {
@@ -279,6 +280,7 @@ img {
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-color: var(--secondary);
     opacity: 0;
     transition: opacity 1s ease-in-out;
     display: flex;
